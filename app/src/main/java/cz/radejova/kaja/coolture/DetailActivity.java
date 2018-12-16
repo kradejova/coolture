@@ -55,15 +55,15 @@ public class DetailActivity extends AppCompatActivity {
                 String akce = detail_akce.getText().toString();
                 String popis = detail_popis.getText().toString();
                 String likeDislike = detail_likeDislike.getText().toString();
+                Polozka polozka = new Polozka(nazev, datum, akce, popis, likeDislike);
 
                 if (nazev.length() == 0 || datum.length() == 0 || akce.length()==0) {
                     Toast.makeText(getApplicationContext(), "Název, datum, typ akce musí být vyplněný.", Toast.LENGTH_LONG ).show();
 
+                } else if (appDatabase.polozkaDao().getByNames(nazev, akce, popis, likeDislike) != null) {
+                    Toast.makeText(getApplicationContext(), "Tato akce už v databázi existuje.", Toast.LENGTH_LONG).show();
+
                 } else {
-
-                Polozka polozka = new Polozka(nazev, datum, akce, popis, likeDislike);
-
-
                     appDatabase.polozkaDao().insertAll(polozka);
                     Log.d("Kaja", polozka.nazev + " " + polozka.datum + " " + polozka.akce + " " + polozka.popis + " " + polozka.likeDislike);
                     adapter.notifyDataSetChanged();

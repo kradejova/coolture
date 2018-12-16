@@ -27,16 +27,17 @@
                 android:id="@+id/detail_nazev"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Jak se cooltura jmenovala?"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp"
+                android:hint="Jak se cooltura jmenovala?"
+                android:maxLines="2"
                 android:paddingLeft="8dp"
+                android:paddingTop="10dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:maxLines="4"/>
+                android:scrollbars="vertical" />
 
             <TextView
                 android:id="@+id/main_title_datum"
@@ -50,16 +51,17 @@
                 android:id="@+id/detail_datum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kdy se akce konala?"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp"
+                android:hint="Kdy se akce konala?"
+                android:maxLines="1"
                 android:paddingLeft="8dp"
+                android:paddingTop="10dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:maxLines="3"/>
+                android:scrollbars="vertical" />
 
             <TextView
                 android:id="@+id/main_title_akce"
@@ -73,16 +75,17 @@
                 android:id="@+id/detail_akce"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="O co šlo? Koncert, divadlo, kino?"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp"
+                android:hint="O co šlo? Koncert, divadlo, kino?"
+                android:maxLines="2"
                 android:paddingLeft="8dp"
+                android:paddingTop="10dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:maxLines="3"/>
+                android:scrollbars="vertical" />
 
             <TextView
                 android:id="@+id/main_title_popis"
@@ -96,16 +99,17 @@
                 android:id="@+id/detail_popis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Jaké to bylo? Kdo v tom hrál?"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp"
+                android:hint="Jaké to bylo? Kdo v tom hrál?"
+                android:maxLines="2"
                 android:paddingLeft="8dp"
+                android:paddingTop="10dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:maxLines="3"/>
+                android:scrollbars="vertical" />
 
             <TextView
                 android:id="@+id/main_title_likeDislike"
@@ -119,20 +123,20 @@
                 android:id="@+id/detail_likeDislike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Co bylo top? Co se ti nelíbilo?"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp"
+                android:hint="Co bylo top? Co se ti nelíbilo?"
+                android:maxLines="2"
                 android:paddingLeft="8dp"
+                android:paddingTop="10dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:maxLines="3"/>
+                android:scrollbars="vertical" />
 
 
         </LinearLayout>
-
 
 
         <com.getbase.floatingactionbutton.FloatingActionButton
@@ -142,10 +146,10 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="end|bottom"
-            android:src="@drawable/ic_my_icon"
             android:layout_marginBottom="16dp"
-            />
-
+            android:src="@drawable/ic_fab_check_black_24dp" />
 
     </FrameLayout>
+
+
 </ScrollView>

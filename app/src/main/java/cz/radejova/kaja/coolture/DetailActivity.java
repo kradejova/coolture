@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
@@ -23,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
     private Adapter adapter;
     private ListView main_list;
     private FloatingActionButton detail_floating_button;
+
 
 
     @Override
@@ -54,15 +56,26 @@ public class DetailActivity extends AppCompatActivity {
                 String popis = detail_popis.getText().toString();
                 String likeDislike = detail_likeDislike.getText().toString();
 
+                if (nazev.length() == 0 || datum.length() == 0 || akce.length()==0) {
+                    Toast.makeText(getApplicationContext(), "Název, datum, typ akce musí být vyplněný.", Toast.LENGTH_LONG ).show();
+
+                } else {
+
                 Polozka polozka = new Polozka(nazev, datum, akce, popis, likeDislike);
-                appDatabase.polozkaDao().insertAll(polozka);
-                Log.d("Kaja", polozka.nazev + " " + polozka.datum + " " +polozka.akce + " " + polozka.popis + " " + polozka.likeDislike);
-                adapter.notifyDataSetChanged();
+
+
+                    appDatabase.polozkaDao().insertAll(polozka);
+                    Log.d("Kaja", polozka.nazev + " " + polozka.datum + " " + polozka.akce + " " + polozka.popis + " " + polozka.likeDislike);
+                    adapter.notifyDataSetChanged();
+                    finish();
+                }
 
                 //Toast.makeText(this, "Úspěšně uloženo.", Toast.LENGTH_LONG).show();
-                finish();
+
             }
         });
+
+
 
 
     }

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_title_nazev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Název" />
+
+            <EditText
+                android:id="@+id/detail_nazev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jak se cooltura jmenovala?"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:maxLines="4"/>
+
+            <TextView
+                android:id="@+id/main_title_datum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Datum" />
+
+            <EditText
+                android:id="@+id/detail_datum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kdy se akce konala?"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:maxLines="3"/>
+
+            <TextView
+                android:id="@+id/main_title_akce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Typ akce" />
+
+            <EditText
+                android:id="@+id/detail_akce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="O co šlo? Koncert, divadlo, kino?"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:maxLines="3"/>
+
+            <TextView
+                android:id="@+id/main_title_popis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Popis" />
+
+            <EditText
+                android:id="@+id/detail_popis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jaké to bylo? Kdo v tom hrál?"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:maxLines="3"/>
+
+            <TextView
+                android:id="@+id/main_title_likeDislike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Co se mi líbilo/nelíbilo" />
+
+            <EditText
+                android:id="@+id/detail_likeDislike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Co bylo top? Co se ti nelíbilo?"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:maxLines="3"/>
+
+
+        </LinearLayout>
+
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/detail_floating_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_my_icon"
+            android:layout_marginBottom="16dp"
+            />
+
+
+    </FrameLayout>
+</ScrollView>

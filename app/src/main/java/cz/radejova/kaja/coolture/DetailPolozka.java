@@ -16,6 +16,7 @@ public class DetailPolozka extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_polozka);
+        setTitle("Detail položky");
 
         detailPolozka_nazev = findViewById(R.id.detailPolozka_nazev);
         detailPolozka_datum = findViewById(R.id.detailPolozka_datum);

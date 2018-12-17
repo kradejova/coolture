@@ -31,6 +31,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        setTitle("Nová položka");
 
         detail_nazev = findViewById(R.id.detail_nazev);
         detail_datum = findViewById(R.id.detail_datum);

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+
 public class MainActivity extends AppCompatActivity {
     private Polozka polozka;
     private AppDatabase appDatabase;
@@ -45,7 +47,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+//main_list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//    @Override
+//    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//        MaterialDialog dialog = new MaterialDialog.Builder(getApplicationContext())
+//                .title(getString(R.string.main_dialog_title))
+//                .content(getString(R.string.main_dialog_content))
+//                .positiveText("OK")
+//                .negativeText("Cancel")
+//                .show();
+//        return false;
+//    }
+//});
     }
 
     @Override

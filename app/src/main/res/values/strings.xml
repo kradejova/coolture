@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Coolture</string>
+
+    <string name="main_dialog_title">Smazání akce</string>
+    <string name="main_dialog_content">Opravdu má být tato akce smazána?</string>
+    <string name="main_menu_save">Ulozit</string>
 </resources>

@@ -4,6 +4,7 @@ import android.arch.persistence.room.Room;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DetailPolozka extends AppCompatActivity {
@@ -60,5 +61,21 @@ public class DetailPolozka extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.detail, menu);
                 return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.detail;
+
+                AppDatabase appDatabase = Room.databaseBuilder(this, AppDatabase.class, "database").allowMainThreadQueries().build();
+
+                final int uid = getIntent().getIntExtra("uid", 0);
+
+                Polozka polozka = appDatabase.polozkaDao().getByUid(uid); //dopsat mazani
+
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

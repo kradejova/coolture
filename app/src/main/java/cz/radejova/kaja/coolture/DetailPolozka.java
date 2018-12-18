@@ -3,6 +3,7 @@ package cz.radejova.kaja.coolture;
 import android.arch.persistence.room.Room;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class DetailPolozka extends AppCompatActivity {
@@ -11,6 +12,7 @@ public class DetailPolozka extends AppCompatActivity {
     private TextView detailPolozka_akce;
     private TextView detailPolozka_popis;
     private TextView detailPolozka_likeDislike;
+    private Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +53,18 @@ public class DetailPolozka extends AppCompatActivity {
 //            }
 //        });
 
+    }
+
+    public void smazatPolozku(View view) {
+        AppDatabase appDatabase = Room.databaseBuilder(this, AppDatabase.class, "database").allowMainThreadQueries().build();
+
+        final int uid = getIntent().getIntExtra("uid", 0);
+
+        Polozka polozka = appDatabase.polozkaDao().getByUid(uid);
+
+        appDatabase.polozkaDao().delete(polozka);
+        adapter = new Adapter(this, appDatabase);
+        adapter.notifyDataSetChanged();
+        finish();
     }
 }

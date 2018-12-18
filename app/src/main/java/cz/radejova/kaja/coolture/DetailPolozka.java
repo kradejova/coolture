@@ -3,6 +3,7 @@ package cz.radejova.kaja.coolture;
 import android.arch.persistence.room.Room;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 public class DetailPolozka extends AppCompatActivity {
@@ -17,6 +18,8 @@ public class DetailPolozka extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_polozka);
         setTitle("Detail položky");
+
+
 
         detailPolozka_nazev = findViewById(R.id.detailPolozka_nazev);
         detailPolozka_datum = findViewById(R.id.detailPolozka_datum);
@@ -51,5 +54,11 @@ public class DetailPolozka extends AppCompatActivity {
 //            }
 //        });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.detail, menu);
+                return super.onCreateOptionsMenu(menu);
     }
 }

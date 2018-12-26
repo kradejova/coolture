@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="Název" />
+                android:text="@string/add_item_nazev" />
 
             <EditText
                 android:id="@+id/detail_nazev"
@@ -31,7 +31,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="8dp"
-                android:hint="Jak se cooltura jmenovala?"
+                android:hint="@string/add_item_nazev_hint"
                 android:maxLines="2"
                 android:paddingLeft="8dp"
                 android:paddingTop="10dp"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="Datum" />
+                android:text="@string/add_item_datum" />
 
             <EditText
                 android:id="@+id/detail_datum"
@@ -55,7 +55,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="8dp"
-                android:hint="Kdy se akce konala?"
+                android:hint="@string/add_item_datum_hint"
                 android:maxLines="1"
                 android:paddingLeft="8dp"
                 android:paddingTop="10dp"
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="Typ akce" />
+                android:text="@string/add_item_typ_akce" />
 
             <EditText
                 android:id="@+id/detail_akce"
@@ -79,7 +79,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="8dp"
-                android:hint="O co šlo? Koncert, divadlo, kino?"
+                android:hint="@string/add_item_typ_akce_hint"
                 android:maxLines="2"
                 android:paddingLeft="8dp"
                 android:paddingTop="10dp"
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="Popis" />
+                android:text="@string/add_item_popis" />
 
             <EditText
                 android:id="@+id/detail_popis"
@@ -103,7 +103,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="8dp"
-                android:hint="Jaké to bylo? Kdo v tom hrál?"
+                android:hint="@string/add_item_popis_hint"
                 android:maxLines="2"
                 android:paddingLeft="8dp"
                 android:paddingTop="10dp"
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="Co se mi líbilo/nelíbilo" />
+                android:text="@string/add_item_likeDislike" />
 
             <EditText
                 android:id="@+id/detail_likeDislike"
@@ -127,7 +127,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="8dp"
-                android:hint="Co bylo top? Co se ti nelíbilo?"
+                android:hint="@string/add_item_likeDislike_hint"
                 android:maxLines="2"
                 android:paddingLeft="8dp"
                 android:paddingTop="10dp"

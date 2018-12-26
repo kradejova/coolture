@@ -1,6 +1,7 @@
 package cz.radejova.kaja.coolture;
 
 import android.arch.persistence.room.Room;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,22 @@ public class DetailPolozka extends AppCompatActivity {
         detailPolozka_popis.setText(polozka.popis);
         detailPolozka_likeDislike.setText(polozka.likeDislike);
 
+        findViewById(R.id.floating_button_detail_polozka).setOnClickListener(new View.OnClickListener() { //floating button, po kliknuti se otevre formular na pridani nove akce do DB
+            @Override
+            public void onClick(View v) {
+                AppDatabase appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "database").allowMainThreadQueries().build();
+
+                final int uid = getIntent().getIntExtra("uid", 0);
+
+                Polozka polozka = appDatabase.polozkaDao().getByUid(uid);
+
+                appDatabase.polozkaDao().delete(polozka);
+                adapter = new Adapter(getApplicationContext(), appDatabase);
+                adapter.notifyDataSetChanged();
+                finish();
+            }
+        });
+
 //        findViewById(R.id.editDetail_floating_button).setOnClickListener(new View.OnClickListener() { //po kliknuti muze uzivatel editovat text v polozkach
 //            @Override
 //            public void onClick(View v) {
@@ -55,16 +72,5 @@ public class DetailPolozka extends AppCompatActivity {
 
     }
 
-    public void smazatPolozku(View view) {
-        AppDatabase appDatabase = Room.databaseBuilder(this, AppDatabase.class, "database").allowMainThreadQueries().build();
 
-        final int uid = getIntent().getIntExtra("uid", 0);
-
-        Polozka polozka = appDatabase.polozkaDao().getByUid(uid);
-
-        appDatabase.polozkaDao().delete(polozka);
-        adapter = new Adapter(this, appDatabase);
-        adapter.notifyDataSetChanged();
-        finish();
-    }
 }

@@ -4,4 +4,15 @@
     <string name="main_dialog_title">Smazání akce</string>
     <string name="main_dialog_content">Opravdu má být tato akce smazána?</string>
     <string name="main_menu_save">Ulozit</string>
+    <string name="add_item_nazev">Název</string>
+    <string name="add_item_datum">Datum</string>
+    <string name="add_item_typ_akce">Typ akce</string>
+    <string name="add_item_popis">Popis</string>
+    <string name="add_item_likeDislike">Co se mi líbilo/nelíbilo</string>
+    <string name="add_item_nazev_hint">Jak se cooltura jmenovala?</string>
+    <string name="add_item_datum_hint">Kdy se akce konala?</string>
+    <string name="add_item_typ_akce_hint">O co šlo? Koncert, divadlo, kino?</string>
+    <string name="add_item_popis_hint">Jaké to bylo? Kdo v tom hrál?</string>
+    <string name="add_item_likeDislike_hint">Co bylo top? Co se ti nelíbilo?</string>
+   
 </resources>

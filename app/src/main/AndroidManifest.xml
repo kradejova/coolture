@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailActivity" />
-        <activity android:name=".DetailPolozka"></activity>
+        <activity android:name=".DetailPolozka" />
+        <activity android:name=".EditPolozkaActivity"></activity>
     </application>
 
 </manifest>

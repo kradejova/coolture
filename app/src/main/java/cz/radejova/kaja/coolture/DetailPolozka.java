@@ -73,4 +73,39 @@ public class DetailPolozka extends AppCompatActivity {
     }
 
 
+    public void editItem(View view) {
+        AppDatabase appDatabase = Room.databaseBuilder(this, AppDatabase.class, "database").allowMainThreadQueries().build();
+
+        int uid = getIntent().getIntExtra("uid", 0);
+
+        Polozka polozka = appDatabase.polozkaDao().getByUid(uid);
+
+        Intent intent = new Intent(getApplicationContext(), EditPolozkaActivity.class);
+        intent = intent.putExtra("uid", uid);
+
+        startActivity(intent);
+
+
+    }
+
+    public void obnovitDetailPoEditaci() {
+        AppDatabase appDatabase = Room.databaseBuilder(this, AppDatabase.class, "database").allowMainThreadQueries().build();
+        adapter = new Adapter(this, appDatabase);
+
+        final int uid = getIntent().getIntExtra("uidEdit", 0);
+
+        Polozka polozka = appDatabase.polozkaDao().getByUid(uid);
+
+        appDatabase.polozkaDao().update(polozka.nazev, polozka.datum, polozka.akce, polozka.popis, polozka.likeDislike);
+        adapter = new Adapter(getApplicationContext(), appDatabase);
+        adapter.notifyDataSetChanged();
+
+
+        detailPolozka_nazev.setText(polozka.nazev);
+        detailPolozka_datum.setText(polozka.datum);
+        detailPolozka_akce.setText(polozka.akce);
+        detailPolozka_popis.setText(polozka.popis);
+        detailPolozka_likeDislike.setText(polozka.likeDislike);
+    }
+
 }

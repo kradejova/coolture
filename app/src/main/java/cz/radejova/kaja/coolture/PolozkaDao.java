@@ -23,4 +23,7 @@ public interface PolozkaDao {
 
     @Query("SELECT * FROM polozka WHERE nazev = :nazev AND akce = :akce AND popis = :popis AND likeDislike = :likeDislike")
     Polozka getByNames(String nazev, String akce, String popis, String likeDislike);
+
+    @Query("UPDATE polozka SET nazev = :nazev, akce = :akce, popis = :popis, datum = :datum, likeDislike = :likeDislike WHERE uid = :uid    ")
+    Polozka update(String nazev, String datum, String akce, String popis, String likeDislike);
 }

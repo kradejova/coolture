@@ -15,15 +15,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/detailPolozka_edit_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="editItem"
-                android:text="Edit" />
-
-            <TextView
-                android:id="@+id/detailPolozka_nazev"
+            <EditText
+                android:id="@+id/edit_detailPolozka_nazev"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -37,8 +30,8 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/detailPolozka_datum"
+            <EditText
+                android:id="@+id/edit_detailPolozka_datum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -50,8 +43,8 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp" />
 
-            <TextView
-                android:id="@+id/detailPolozka_akce"
+            <EditText
+                android:id="@+id/edit_detailPolozka_akce"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -63,8 +56,8 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp" />
 
-            <TextView
-                android:id="@+id/detailPolozka_popis"
+            <EditText
+                android:id="@+id/edit_detailPolozka_popis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -76,8 +69,8 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp" />
 
-            <TextView
-                android:id="@+id/detailPolozka_likeDislike"
+            <EditText
+                android:id="@+id/edit_detailPolozka_likeDislike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -108,7 +101,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/floatingActionButton"
-            android:src="@drawable/ic_delete_white_24dp" />
+            android:src="@drawable/ic_fab_check_black_24dp" />
 
     </FrameLayout>
 
